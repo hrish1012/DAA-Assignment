@@ -1,22 +1,24 @@
 # DAA-Assignment
-PROBLEM STATEMENT:
+**PROBLEM STATEMENT:**
 
 Implement the solution for the Maximum Sum Array by populating the array of size 14 with non-zero [positive/negative] random numbers.
 Comment on the sum, if the first element is positive/negative and the last element is positive/negative.
 
-
-SOLUTION:
+**SOLUTION:**
 
 •An array of size n=14 is considered with
+	
 	- start index 0 as low
 	- last index (n-1=13) as high
 	- center of the array i.e.,integer value of (low+high)//2 =6 as mid
 
 •The array is divided into two halves
+
 	- left half from low to mid 
 	- right half from mid+1 to high
 
-FIRST APPROACH : By using loops in order to iterate through both  halves of the given array
+
+**FIRST APPROACH : By using loops in order to iterate through both  halves of the given array**
 
 The solution for the maximum sum subarray problem by using loops is designed in the following way:
 
@@ -28,7 +30,8 @@ The solution for the maximum sum subarray problem by using loops is designed in 
 
 	•The final maximum sum = left_sum + right_sum
 
-CODE :
+**CODE :**
+```py
 
     def maximumSum(arr,low,high):
 
@@ -63,9 +66,10 @@ CODE :
     
     a=[5, 8, -3, 9, 12, -8, 7, 11, -9, 1, -2, 4,-7, 6]
     maximumSum(a, 0, len(a)-1 )
-    
+  ```  
 
-SECOND APPROACH : Divide and Conquer algorithm(Recursion)
+
+**SECOND APPROACH : Divide and Conquer algorithm(Recursion)**
 
 The solution for the maximum sum subarray problem by divide and conquer algorithm is designed in the following way:
 	
@@ -76,8 +80,8 @@ The solution for the maximum sum subarray problem by divide and conquer algorith
 		-Maximum subarray sum in right half (Make a recursive call)
 		-Maximum subarray sum such that the subarray crosses the midpoint
 
-CODE :
-
+**CODE :**
+```py
     def cross_sum(A,low,mid,high):
     	sum=0
     	leftsum=-1000;
@@ -120,45 +124,31 @@ CODE :
     a = [5, 8, -3, 9, 12, -8, 7, 11, -9, 1, -2, 4,-7,6]
     maximum_sum = maximum_sum_subarray(a,0,len(a)-1); 
     print("Maximum sum : " ,maximum_sum)
+```
 
 
-
-TEST CASES :
+**TEST CASES :**
 
 1.First element : positive  and Last element : positive
-  
-	[5, 8, -3, 9, 12, -8, 7, 11, -9, 1, -2, 4, -7, 6]
-	Maximum sum subarray :  [5, 8, -3, 9, 12, -8, 7, 11]
-	Maximum sum :  41
-	Start index :  0
-	End index   :  7
+
+![Screenshot (417)](https://user-images.githubusercontent.com/113937257/191204200-591ecd66-3c84-4968-ad55-19c573a9d6c2.png)
+
 	
 2.First element : positive  and Last element : negative
 
-	[5, 8, -3, 9, 12, -8, 7, 11, -9, 1, -2, 4, -7, -6]
-	Maximum sum subarray :  [5, 8, -3, 9, 12, -8, 7, 11]
-	Maximum sum :  41
-	Start index :  0
-	End index   :  7
+![Screenshot (420)](https://user-images.githubusercontent.com/113937257/191204544-add90e6e-07d6-40dc-b6f4-acc8223e727d.png)
 
 3.First element : negative  and Last element : positive
 
-	[-5, 8, -3, 9, 12, -8, 7, 11, -9, 1, -2, 4, -7, 6]
-	Maximum sum subarray :  [8, -3, 9, 12, -8, 7, 11]
-	Maximum sum :  36
-	Start index :  1
-	End index   :  7
+![Screenshot (418)](https://user-images.githubusercontent.com/113937257/191204625-58c36fdc-dded-41d6-9f51-b84c185d9458.png)
+
 
 4.First element : negative  and Last element : negative
 
-	[-5, 8, -3, 9, 12, -8, 7, 11, -9, 1, -2, 4, -7, -6]
-	Maximum sum subarray :  [8, -3, 9, 12, -8, 7, 11]
-	Maximum sum :  36
-	Start index :  1
-	End index   :  7
+![Screenshot (419)](https://user-images.githubusercontent.com/113937257/191204709-435b39ab-43a4-48a1-9674-2dc89c3440f6.png)
 
 
-CONCLUSION :
+**CONCLUSION :**
 
 For start element = +5 and end element= +6/-6 ,the value of maximum sum is same  i.e., 41
 And
