@@ -10,7 +10,7 @@ Comment on the sum, if the first element is positive/negative and the last eleme
 	
 	- start index 0 as low
 	- last index (n-1=13) as high
-	- center of the array i.e.,integer value of (low+high)//2 =6 as mid
+	- center of the array i.e.,integer value of (low+high)//2 =6 or 7 as mid
 
 •The array is divided into two halves
 
