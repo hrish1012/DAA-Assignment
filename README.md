@@ -19,6 +19,7 @@ SOLUTION:
 FIRST APPROACH : By using loops in order to iterate through both  halves of the given array
 
 The solution for the maximum sum subarray problem by using loops is designed in the following way:
+
 	•Two for loops are initialized from the mid position with variables i and j for the left subarray and the right subarray respectively.
 
 	•The first loop keeps on decrementing the value of i in order to go from mid to low and get the maximum sum from the left side.
@@ -31,6 +32,7 @@ The solution for the maximum sum subarray problem by using loops is designed in 
 SECOND APPROACH : Divide and Conquer algorithm(Recursion)
 
 The solution for the maximum sum subarray problem by divide and conquer algorithm is designed in the following way:
+	
 	•Divide the given array into two halves
 
 	•Return the maximum of the following three as the final maximum sum 
