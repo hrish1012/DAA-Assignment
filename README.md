@@ -131,30 +131,31 @@ The solution for the maximum sum subarray problem by divide and conquer algorith
 
 1.First element : positive  and Last element : positive
 
-![Screenshot (417)](https://user-images.githubusercontent.com/113937257/191204200-591ecd66-3c84-4968-ad55-19c573a9d6c2.png)
+![Screenshot (421)](https://user-images.githubusercontent.com/113937257/191206786-f5c16f1b-3b65-4b0e-8bab-24847f0e7dc0.png)
+
 
 	
 2.First element : positive  and Last element : negative
 
-![Screenshot (420)](https://user-images.githubusercontent.com/113937257/191204544-add90e6e-07d6-40dc-b6f4-acc8223e727d.png)
+![Screenshot (422)](https://user-images.githubusercontent.com/113937257/191207554-78f5b3e5-be72-4606-8b6c-8df3b868b908.png)
 
 3.First element : negative  and Last element : positive
 
-![Screenshot (418)](https://user-images.githubusercontent.com/113937257/191204625-58c36fdc-dded-41d6-9f51-b84c185d9458.png)
+![Screenshot (423)](https://user-images.githubusercontent.com/113937257/191206898-c0a1fcc0-3a02-4833-804e-424191490984.png)
 
 
 4.First element : negative  and Last element : negative
 
-![Screenshot (419)](https://user-images.githubusercontent.com/113937257/191204709-435b39ab-43a4-48a1-9674-2dc89c3440f6.png)
+![Screenshot (424)](https://user-images.githubusercontent.com/113937257/191207340-f14948f4-699b-4df2-bc37-09a8ebd7be68.png)
 
 
 **CONCLUSION :**
 
-For start element = +5 and end element= +6/-6 ,the value of maximum sum is same  i.e., 41
-And
-For start element =-5 and end element = +6/-6, the value of the maximum sum is the same i.e., 36
-The difference between the two maximum sum values i.e., 41 and 36 = 5 i.e, the positive value of the start element.
+	For start element = +5 and end element= +6/-6 ,the value of maximum sum is same  i.e., 41
 
-When the sign of the start element is changed from positive to negative irrespective of the sign of the end element, the value of the maximum sum will be decreased by the magnitude of the start element.
+	For start element =-5 and end element = +6/-6, the value of the maximum sum is the same i.e., 36
+	The difference between the two maximum sum values i.e., 41 and 36 = 5 i.e, the positive value of the start element.
+
+	When the sign of the start element is changed from positive to negative irrespective of the sign of the end element, the value of the maximum sum will be decreased by the magnitude of the start element.
 
 
