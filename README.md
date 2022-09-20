@@ -157,6 +157,6 @@ The solution for the maximum sum subarray problem by divide and conquer algorith
 	The difference between the two maximum sum values i.e., 41 and 36 = 5 i.e, the positive value of the start element.
 
 	When the sign of the start element is changed from positive to negative irrespective of the sign of the end element,
-	the value of the maximum sum will be decreased by the magnitude of the start element.
+	the value of the maximum sum will be altered by the magnitude of the start element.
 
 
