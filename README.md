@@ -28,6 +28,42 @@ The solution for the maximum sum subarray problem by using loops is designed in 
 
 	•The final maximum sum = left_sum + right_sum
 
+CODE :
+
+def maximumSum(arr,low,high):
+
+    left_sum=-9999999999
+    right_sum=-9999999999 
+    suml=0
+    sumr=0
+    maxLeft=-1
+    maxRight=-1
+    mid=(low+high)//2
+    
+    #for left half of the array
+    for i in range(mid,low-1,-1):
+        suml = suml+arr[i]
+        if(suml>left_sum):
+            left_sum=suml
+            maxLeft=i
+        
+    
+    #for right half of the array
+    for j in range(mid+1,high+1,1):
+        sumr=sumr+arr[j]
+        if(sumr>right_sum):
+            right_sum=sumr
+            maxRight=j
+    
+    print(a)
+    print("Maximum sum subarray : ",arr[maxLeft:maxRight + 1])    
+    print("Maximum sum : ", (left_sum+right_sum))
+    print("Start index : ",(maxLeft))
+    print("End index   : ",maxRight)
+    
+a=[5, 8, -3, 9, 12, -8, 7, 11, -9, 1, -2, 4,-7, 6]
+maximumSum(a, 0, len(a)-1 )
+    
 
 SECOND APPROACH : Divide and Conquer algorithm(Recursion)
 
@@ -39,6 +75,52 @@ The solution for the maximum sum subarray problem by divide and conquer algorith
 		-Maximum subarray sum in left half (Make a recursive call)
 		-Maximum subarray sum in right half (Make a recursive call)
 		-Maximum subarray sum such that the subarray crosses the midpoint
+
+CODE :
+
+def cross_sum(A,low,mid,high):
+    sum=0
+    leftsum=-1000;
+    #for the LHS elements of mid 
+    for i in range(mid,low-1,-1):
+        sum=sum+A[i]
+        if (sum>leftsum):
+            leftsum=sum
+            
+
+    #for the RHS elements of mid
+    sum=0
+    rightsum=-1000; 
+    for i in range (mid+1,high+1):
+        sum=sum+A[i]
+        if (sum>rightsum):
+           rightsum=sum
+           
+         
+    return max(leftsum + rightsum ,leftsum,rightsum)
+    
+
+
+def maximum_sum_subarray(A,low,high):
+    if (low>high):
+      return -9999999
+        
+    if (high==low):     
+      return A[low]
+  
+    else:   
+      mid=(low + high)//2 
+      return max(maximum_sum_subarray(A, low, mid-1), maximum_sum_subarray(A, mid+1, high),cross_sum(A, low, mid, high))
+    
+      #Maximum subarray sum in left half------------------------------------>maximum_sum_subarray(A, low, mid-1)
+      #Maximum subarray sum in right half----------------------------------->maximum_sum_subarray(A, mid+1, high)
+      #Maximum subarray sum such that the subarray crosses the midpoint----->mid_sum(A, low, mid, high)
+    
+      
+a = [5, 8, -3, 9, 12, -8, 7, 11, -9, 1, -2, 4,-7,6]
+maximum_sum = maximum_sum_subarray(a,0,len(a)-1); 
+print("Maximum sum : " ,maximum_sum)
+
 
 
 
