@@ -29,7 +29,7 @@ The solution for the maximum sum subarray problem by using loops is designed in 
 	•The final maximum sum = left_sum + right_sum
 
 CODE :
-
+'''py
 def maximumSum(arr,low,high):
 
     left_sum=-9999999999
@@ -63,7 +63,7 @@ def maximumSum(arr,low,high):
     
 a=[5, 8, -3, 9, 12, -8, 7, 11, -9, 1, -2, 4,-7, 6]
 maximumSum(a, 0, len(a)-1 )
-    
+'''    
 
 SECOND APPROACH : Divide and Conquer algorithm(Recursion)
 
